@@ -68,7 +68,7 @@ export const RESUME_DATA = {
       start: "2021",
       end: "2024",
       description:
-        "Implemented new features for Admissions, Branch Change, and No-Dues modules which are used by over 7000 students. Guided a team of 5 developers. Implemented API endpoints for the TimeTable module and wrote API documentation for the App Team. Technologies: Ruby on Rails, MySQL",
+        "Implemented new features for Admissions, Branch Change, and No-Dues modules, which over 7,000 students use. Guided a team of 5 developers. Implemented API endpoints for the TimeTable module and wrote API documentation for the App Team. Technologies: Ruby on Rails, MySQL.",
     },
     {
       company: "Centre for Innovation, IPR and Industrial Consultancy(CIC), NITK",
@@ -142,7 +142,7 @@ export const RESUME_DATA = {
         "Golang",
         "SSH",
       ],
-      description: "An SSH app to view resume right in the terminal.",
+      description: "An SSH app to view resume, right in the terminal.",
       link: {
         label: "github.com/hrushikeshj/ssh-cv",
         href: "https://github.com/hrushikeshj/ssh-cv",
