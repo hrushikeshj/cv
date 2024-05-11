@@ -92,12 +92,14 @@ export default function Page() {
             <AvatarFallback>{RESUME_DATA.initials}</AvatarFallback>
           </Avatar>
         </div>
-        <Section>
-          <h2 className="text-xl font-bold">About</h2>
-          <p className="text-pretty font-mono text-sm text-muted-foreground">
-            {RESUME_DATA.summary}
-          </p>
-        </Section>
+        {RESUME_DATA.summary ? (
+          <Section>
+            <h2 className="text-xl font-bold">About</h2>
+            <p className="text-pretty font-mono text-sm text-muted-foreground">
+              {RESUME_DATA.summary}
+            </p>
+          </Section>
+        ) : ("")}
         <Section>
           <h2 className="text-xl font-bold">Work Experience</h2>
           {RESUME_DATA.work.map((work) => {
