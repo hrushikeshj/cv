@@ -1,0 +1,43 @@
+name: Build
+
+on:
+  push:
+    tags:
+      - deploy
+  workflow_dispatch:
+
+env:
+  CI: false
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Use Node.js 20.13.1
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20.13.1
+        cache: 'yarn'
+    - run: yarn install --frozen-lockfile
+    - run: yarn build
+    - name: List build files
+      run: |
+        ls
+        ls ./out
+
+    - name: Push gh-pages brach
+      run: |
+        git config --global user.email "hrushi2002j@gmail.com"
+        git config --global user.name "hrushikeshj"
+        git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+        echo $(date) > ./build/ver.txt
+        npm i gh-pages --save-dev
+        npx gh-pages -d out
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        
+        
+      
