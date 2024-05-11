@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 env:
-  CI: false
+  CI: true
 
 jobs:
   build:
@@ -26,6 +26,7 @@ jobs:
     - run: yarn build
     - name: List build files
       run: |
+        echo $(date) > ./out/ver.txt
         ls ./out
 
     - name: Deploy
