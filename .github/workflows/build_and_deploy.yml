@@ -28,13 +28,8 @@ jobs:
         ls
         ls ./out
 
-    - name: Push gh-pages brach
-      run: |
-        git config --global user.email "hrushi2002j@gmail.com"
-        git config --global user.name "hrushikeshj"
-        git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-        echo $(date) > ./out/ver.txt
-        yarn add gh-pages --save-dev
-        yarn run gh-pages -d out
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./public
