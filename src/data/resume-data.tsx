@@ -17,6 +17,8 @@ import {
   TastyCloudLogo,
   YearProgressLogo,
 } from "@/images/logos";
+
+import HrushiProfilePic from "@/images/hrushi_profile.jpg";
 import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
 
 export const RESUME_DATA = {
@@ -27,7 +29,7 @@ export const RESUME_DATA = {
   about:
     "Fresh graduate skilled in web development with a keen interest in exploring the depths of the Linux kernel and other emerging technologies.",
   summary: "",
-  avatarUrl: "https://media.licdn.com/dms/image/D5603AQFTgNzkWoQ2-g/profile-displayphoto-shrink_400_400/0/1711566768357?e=1720656000&v=beta&t=iaASOnoJdy-lT63MJhUR0UkrqmQ5EVD2_GrS5uIcAI0",
+  avatarUrl: HrushiProfilePic.src,
   personalWebsiteUrl: "https://hrushi.dev",
   contact: {
     email: "hrushi2002j@gmail.com",
@@ -64,7 +66,6 @@ export const RESUME_DATA = {
       link: "https://iris.nitk.ac.in/about_us",
       badges: [],
       title: "Web Developer → Head of Maintenance",
-      logo: ParabolLogo,
       start: "2021",
       end: "2024",
       description:
@@ -75,7 +76,6 @@ export const RESUME_DATA = {
       link: "",
       badges: [],
       title: "Web Developer",
-      logo: ClevertechLogo,
       start: "Jan 2023",
       end: "June 2023",
       description:
